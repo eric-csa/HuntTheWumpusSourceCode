@@ -1,0 +1,10 @@
+Bomb: 
+  Type: GOAT
+  Health: 1000
+  Damage: 0
+  Options:
+    MovementSpeed: 0
+    KnockbackResistance: 1
+    PreventMobKillDrops: true
+  Skills:
+  - skill{s=Explode} ~onSignal:Explode @self

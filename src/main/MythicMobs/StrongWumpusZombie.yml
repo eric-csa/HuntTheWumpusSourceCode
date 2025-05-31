@@ -1,0 +1,21 @@
+StrongWumpusZombie:
+  Type: ZOMBIE
+  Health: 20
+  Damage: 6
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Despawn: false
+    NoDamageTicks: 10
+    FollowRange: 75
+    PreventJockeyMounts: true
+  Drops: []
+  Equipment:
+    - LEATHER_HELMET{color=RED} HEAD
+    - LEATHER_CHESTPLATE{color=RED} CHEST
+    - LEATHER_LEGGINGS{color=RED} LEGS
+    - LEATHER_BOOTS{color=RED} FEET
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
