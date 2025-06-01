@@ -1,9 +1,0 @@
-WumpusSpark:
-  Type: VEX
-  Health: 100
-  Damage: 0
-  Options:
-    MovementSpeed: 0
-    KnockbackResistance: 1
-    PreventMobKillDrops: true
-    Invisible: true

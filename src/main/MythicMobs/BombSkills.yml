@@ -1,8 +1,0 @@
-Explode:
-  Skills:
-   - particlesphere{particle=explosion_emitter;radius=8;amount=100;} @self
-   - damage{amount=3;preventimmunity=true} @playersInRadius{r=2}
-   - damage{amount=2;preventimmunity=true} @playersInRadius{r=4}
-   - damage{amount=2;preventimmunity=true} @playersInRadius{r=6}
-   - damage{amount=3;preventimmunity=true} @playersInRadius{r=10}
-   - command{command=kill;ascaster=true} @self
