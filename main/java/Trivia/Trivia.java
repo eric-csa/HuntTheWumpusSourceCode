@@ -27,6 +27,29 @@ public class Trivia implements Listener {
     /* Hard-coded trivia questions: Each question has text, four answer options, and the index of the correct answer (as string)                                                                                                                        */ static String[][] triviaQuestions = {{"What is the capital of France?", "Berlin", "London", "Paris", "Madrid", "3"},{"Which planet is known as the Red Planet?", "Earth", "Mars", "Jupiter", "Saturn", "2"},{"Who wrote 'Romeo and Juliet'?", "William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen", "1"},{"What is the largest mammal?", "Elephant", "Blue Whale", "Giraffe", "Hippopotamus", "2"},{"In which year did the Titanic sink?", "1912", "1905", "1920", "1918", "1"},{"What is the chemical symbol for water?", "H2O", "CO2", "O2", "NaCl", "1"},{"Who painted the Mona Lisa?", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo", "3"},{"What is the smallest prime number?", "1", "2", "3", "5", "2"},{"Which continent is the Sahara Desert located on?", "Asia", "Africa", "Australia", "South America", "2"},{"What is the hardest natural substance on Earth?", "Gold", "Iron", "Diamond", "Quartz", "3"},{"Who is known as the father of computers?", "Bill Gates", "Charles Babbage", "Steve Jobs", "Alan Turing", "2"},{"Which element has the atomic number 6?", "Carbon", "Oxygen", "Nitrogen", "Helium", "1"},{"What is the currency of Japan?", "Yuan", "Dollar", "Yen", "Won", "3"},{"Who discovered penicillin?", "Alexander Fleming", "Marie Curie", "Isaac Newton", "Albert Einstein", "1"},{"How many continents are there on Earth?", "5", "6", "7", "8", "3"},{"What is the largest planet in our Solar System?", "Saturn", "Earth", "Jupiter", "Neptune", "3"},{"Which language is primarily spoken in Brazil?", "Spanish", "Portuguese", "English", "French", "2"},{"What is the boiling point of water at sea level in Celsius?", "90째C", "100째C", "110째C", "120째C", "2"},{"Who wrote the novel '1984'?", "George Orwell", "Aldous Huxley", "F. Scott Fitzgerald", "Ernest Hemingway", "1"},{"Which gas do plants absorb from the atmosphere during photosynthesis?", "Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen", "2"}};
     // Scrapping logic from /triviaquestions.yaml
 
+    private static String[][] triviaQuestions = {
+            {"What is the capital of France?", "Berlin", "London", "Paris", "Madrid", "3"},
+            {"Which planet is known as the Red Planet?", "Earth", "Mars", "Jupiter", "Saturn", "2"},
+            {"Who wrote 'Romeo and Juliet'?", "William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen", "1"},
+            {"What is the largest mammal?", "Elephant", "Blue Whale", "Giraffe", "Hippopotamus", "2"},
+            {"In which year did the Titanic sink?", "1912", "1905", "1920", "1918", "1"},
+            {"What is the chemical symbol for water?", "H2O", "CO2", "O2", "NaCl", "1"},
+            {"Who painted the Mona Lisa?", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo", "3"},
+            {"What is the smallest prime number?", "1", "2", "3", "5", "2"},
+            {"Which continent is the Sahara Desert located on?", "Asia", "Africa", "Australia", "South America", "2"},
+            {"What is the hardest natural substance on Earth?", "Gold", "Iron", "Diamond", "Quartz", "3"},
+            {"Who is known as the father of computers?", "Bill Gates", "Charles Babbage", "Steve Jobs", "Alan Turing", "2"},
+            {"Which element has the atomic number 6?", "Carbon", "Oxygen", "Nitrogen", "Helium", "1"},
+            {"What is the currency of Japan?", "Yuan", "Dollar", "Yen", "Won", "3"},
+            {"Who discovered penicillin?", "Alexander Fleming", "Marie Curie", "Isaac Newton", "Albert Einstein", "1"},
+            {"How many continents are there on Earth?", "5", "6", "7", "8", "3"},
+            {"What is the largest planet in our Solar System?", "Saturn", "Earth", "Jupiter", "Neptune", "3"},
+            {"Which language is primarily spoken in Brazil?", "Spanish", "Portuguese", "English", "French", "2"},
+            {"What is the boiling point of water at sea level in Celsius?", "90째C", "100째C", "110째C", "120째C", "2"},
+            {"Who wrote the novel '1984'?", "George Orwell", "Aldous Huxley", "F. Scott Fitzgerald", "Ernest Hemingway", "1"},
+            {"Which gas do plants absorb from the atmosphere during photosynthesis?", "Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen", "2"}
+    };
+
     private int minCorrect = 0; // Minimum correct answers needed to pass the trivia challenge
     private int correct;        // Number of questions the player has answered correctly so far
     private int total;          // Total number of trivia questions the player will be asked
