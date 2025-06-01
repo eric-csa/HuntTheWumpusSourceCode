@@ -1,0 +1,39 @@
+name: HuntTheWumpusPlugin
+version: '${version}'
+main: me.anidiotnon.huntthewumpusplugin.HuntTheWumpusPlugin
+api-version: '1.20'
+commands:
+  OpenLobbyMenu:
+    description: "opens the lobby menu."
+    usage: "/OpenLobbyMenu"
+    permission: ""
+  lobby:
+    description: "kills the player and sends them back to the lobby."
+    usage: "/lobby"
+    permission: ""
+  Spawn:
+    description: "testing command for custom Hunt The Wumpus Mobs."
+    usage: "/Spawn <mobType>"
+    permission: "oponly"
+    permission-message: You must be an operator to use this command!
+  shop:
+    description: "opens the shop"
+    usage: "/shop or /shop <shopType>"
+    permission: ""
+  giverunes:
+    description: "gives runes to the player for testing."
+    usage: "/giverunes <runeAmount>"
+    permission: "oponly"
+  loadhighscores:
+    description: "loads the top high scores of players"
+    usage: "/loadhighscores"
+    permission: ""
+  kill:
+    description: "kills a player"
+    usage: "/kill"
+    permission: ""
+
+permissions:
+  oponly:
+    description: OP-only command permission
+    default: op
