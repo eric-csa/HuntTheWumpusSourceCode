@@ -1,0 +1,25 @@
+Capybara:
+  Type: ZOMBIE
+  Health: 40
+  Damage: 4
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Despawn: false
+    NoDamageTicks: 10
+    FollowRange: 75
+    PreventJockeyMounts: true
+    PreventSunburn: true
+  BossBar:
+    Enabled: true
+    Range: 100
+    Color: PURPLE
+    Style: SEGMENTED_8
+    Title: '&5Capbara'
+  Drops: []
+  AITargetSelectors:
+  - players
+  Skills:
+    - model{m=Capybara} @self ~onSpawn
+    - model{m=Capybara} @self ~onTimer:5

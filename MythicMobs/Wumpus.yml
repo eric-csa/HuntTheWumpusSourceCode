@@ -1,0 +1,29 @@
+Wumpus:
+  Type: ZOMBIE
+  Display: 'Wumpus'
+  Health: 15
+  Damage: 0
+  Options:
+    PreventSunburn: true
+    FollowRange: 75
+    PreventMobKillDrops: true
+    KnockbackResistance: 1
+  BossBar:
+    Enabled: true
+    Range: 100
+    Color: PURPLE
+    Style: SEGMENTED_10
+    Title: '&5Wumpus &9(Phase <caster.var.phase>) &c[<mob.hp>/<mob.mhp>]'
+  Skills:
+    - model{m=WumpusBlue} ~onTimer:1 @self
+    - skill{s=Consume} ~onSignal:Consume @self
+    - skill{s=Leap} ~onSignal:Leap @self
+    - skill{s=WumpusExplode} ~onSignal:WumpusExplode @self
+    - setVar{var=phase;scope=caster;value=1;type=INTEGER} ~onSpawn @self
+    - skill{s=WumpusPhase2} ~onTimer:1 ?healthpercent{p=<67%} true @self
+    - skill{s=WumpusPhase3} ~onTimer:1 ?healthpercent{p=<21%} true @self
+  AITargetSelectors:
+    - players 
+    - attacker
+  AIGoalSelectors:
+    - lookAtTarget{speed=10}

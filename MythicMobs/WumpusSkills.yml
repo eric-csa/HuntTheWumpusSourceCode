@@ -1,0 +1,27 @@
+Consume: #the animation part of the consume attack. First it blinds the player, makes sure that the wumpus doesn't move with a very high slowness level, and indicates the range of consumption pull
+  Skills:
+   - potion{type=BLINDNESS;duration=100;} @target
+   - particlering{particle=soul_fire_flame;points=300;radius=20;repeat=4;repeatinterval=20;} @self
+   - potion{type=SLOW;level=255;duration=100;hasparticles=false} @self
+Leap:
+  Skills:
+   - particlering{particle=glow;points=100;radius=7;} @target
+WumpusExplode:
+  Skills:
+   - potion{type=GLOWING;duration=20;} @self
+   - delay 20
+   - particlesphere{radius=4;particle=firework;amount=400} @self
+   - sound{s=entity.generic.explode;audience=@playersInRadius{r=60};} @self
+WumpusPhase2: 
+  Conditions:
+    - hasTag{t=p2} false
+  Skills:
+    - addTag{t=p2} @self
+    - setVar{scope=caster;var=phase;value=2} @self
+WumpusPhase3: 
+  Conditions:
+    - hasTag{t=p3} false
+  Skills:
+    - addTag{t=p3} @self
+    - setVar{scope=caster;var=phase;value=3} @self
+   
